@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Note Database</title>
+ 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Exercise Database</a>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="container">
+ 	  <div class="row">
+		<button class="btnDay btn btn-default" id="onsdag">Onsdag</button>
+ 		<button class="btnDay btn btn-default" id="torsdag">Torsdag</button>
+ 		<button class="btnDay btn btn-default" id="fredag">Fredag</button>
+ 		<button class="btnDay btn btn-default" id="lordag">Lørdag</button>
+ 		<button class="btnDay btn btn-default" id="sondag">Søndag</button>
+ 		<button class="btnDay btn btn-default" id="mandag">Mandag</button>
+ 	</div>
+
+
+    <div class="row timer">
+        <h1 id="timer">00 : 00 : 000</h1>
+        <button class="btn btn-success" id="toggle">Start</button>
+        <button class="btn btn-info" id="reset">Reset</button>
+    </div>
+
+
+
+    <div class="row">
+        <div id="noteList"></div>
+    </div>
+
+    <div class="row">    
+        <div class="pull-right"><button id="addNoteButton" class="btn btn-success">Add Exercise</button></div>
+    </div>        
+    <div class="row">
+        <div id="noteDetail"></div>
+ 	</div>
+
+    <div class="row">
+        <div id="noteForm">
+            <h2>Edit Exercise</h2>
+            <form role="form" class="form-horizontal">
+            <input type="hidden" id="key">
+  
+            <div class="form-group">
+                <label for="day" class="col-lg-2 control-label">day</label>
+                <div class="col-lg-10">
+                <input type="text" id="day" required class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exercise" class="col-lg-2 control-label">exercise</label>
+                <div class="col-lg-10">
+                <input type="text" id="exercise" required class="form-control">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="body" class="col-lg-2 control-label">Body</label>   
+                <div class="col-lg-10">
+                <textarea id="body" required class="form-control"></textarea>
+                </div>
+            </div> 
+
+            <div class="form-group">
+                <label for="body" class="col-lg-2 control-label">Img</label>   
+                <div class="col-lg-10">
+                <input type="text" id="img" required class="form-control">
+                </div>
+            </div>             
+
+            <div class="form-group">
+                <label for="weight" class="col-lg-2 control-label">weight</label>   
+                <div class="col-lg-10">
+                <input type="text" id="weight" required class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button id="saveNoteButton" class="btn btn-default">Save Exercise</button>
+                </div>
+            </div>
+
+            </form>
+        </div>
+    </div>
+
+    </div>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/stpwatch.js"></script>
+    <script src="js/stpctrl.js"></script>
+ 
+  </body>
+</html>
